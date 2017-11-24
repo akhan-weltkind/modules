@@ -1,8 +1,8 @@
 <?php
 
-namespace Caffeinated\Modules\Console\Generators;
+namespace Akhan\Modules\Console\Generators;
 
-use Caffeinated\Modules\Console\GeneratorCommand;
+use Akhan\Modules\Console\GeneratorCommand;
 
 class MakeProviderCommand extends GeneratorCommand
 {

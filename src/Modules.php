@@ -1,9 +1,9 @@
 <?php
 
-namespace Caffeinated\Modules;
+namespace Akhan\Modules;
 
-use Caffeinated\Modules\Contracts\Repository;
-use Caffeinated\Modules\Exceptions\ModuleNotFoundException;
+use Akhan\Modules\Contracts\Repository;
+use Akhan\Modules\Exceptions\ModuleNotFoundException;
 use Illuminate\Foundation\Application;
 
 class Modules

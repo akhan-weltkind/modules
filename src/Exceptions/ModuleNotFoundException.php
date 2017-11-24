@@ -5,7 +5,7 @@
  * Time: 5:27 PM
  */
 
-namespace Caffeinated\Modules\Exceptions;
+namespace Akhan\Modules\Exceptions;
 
 
 class ModuleNotFoundException extends \Exception {

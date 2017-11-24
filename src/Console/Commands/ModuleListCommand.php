@@ -1,8 +1,8 @@
 <?php
 
-namespace Caffeinated\Modules\Console\Commands;
+namespace Akhan\Modules\Console\Commands;
 
-use Caffeinated\Modules\Modules;
+use Akhan\Modules\Modules;
 use Illuminate\Console\Command;
 
 class ModuleListCommand extends Command

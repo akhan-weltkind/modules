@@ -1,12 +1,13 @@
 {
-    "name": "caffeinated/modules",
-    "description": "Laravel 5.x Modules",
-    "keywords": ["modules", "laravel", "caffeinated"],
+    "name": "akhan/modules",
+    "description": "Laravel 5.5 Modules",
+    "keywords": ["modules", "laravel", "akhan"],
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
-            "name": "Shea Lewis",
-            "email": "shea.lewis89@gmail.com"
+            "name": "Alexander",
+            "email": "akhan@weltkind.com"
         }
     ],
     "require": {
@@ -15,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Caffeinated\\Modules\\": "src/"
+            "Akhan\\Modules\\": "src/"
         }
     },
     "suggest": {
@@ -24,10 +25,13 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Caffeinated\\Modules\\ModulesServiceProvider"
+                "Akhan\\Modules\\ModulesServiceProvider"
             ],
             "aliases": {
-                "Module": "Caffeinated\\Modules\\Facades\\Module"
+                "Module": "Akhan\\Modules\\Facades\\Module"
+            },
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
             }
         }
     }

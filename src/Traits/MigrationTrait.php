@@ -1,6 +1,6 @@
 <?php
 
-namespace Caffeinated\Modules\Traits;
+namespace Akhan\Modules\Traits;
 
 trait MigrationTrait
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Caffeinated\Modules\Console\Generators;
+namespace Akhan\Modules\Console\Generators;
 
-use Caffeinated\Modules\Console\GeneratorCommand;
+use Akhan\Modules\Console\GeneratorCommand;
 
 class MakeControllerCommand extends GeneratorCommand
 {
@@ -48,6 +48,8 @@ class MakeControllerCommand extends GeneratorCommand
      * Get the default namespace for the class.
      *
      * @param string $rootNamespace
+     *
+     * @throws \Akhan\Modules\Exceptions\ModuleNotFoundException
      *
      * @return string
      */

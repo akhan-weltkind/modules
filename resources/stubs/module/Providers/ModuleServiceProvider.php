@@ -1,23 +1,12 @@
 <?php
 
-namespace DummyNamespace\Providers;
+namespace App\Modules\DummyName\Providers;
 
-use Caffeinated\Modules\Support\ServiceProvider;
+use App\Providers\ModuleProvider;
 
-class ModuleServiceProvider extends ServiceProvider
+class ModuleServiceProvider extends ModuleProvider
 {
-    /**
-     * Bootstrap the module services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        $this->loadTranslationsFrom(__DIR__.'/../Resources/Lang', 'DummySlug');
-        $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'DummySlug');
-        $this->loadMigrationsFrom(__DIR__.'/../Database/Migrations', 'DummySlug');
-        $this->loadConfigsFrom(__DIR__.'/../config');
-    }
+    public $module = 'DummySlug';
 
     /**
      * Register the module services.

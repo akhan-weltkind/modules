@@ -1,13 +1,13 @@
 <?php
 
-namespace Caffeinated\Modules;
+namespace Akhan\Modules;
 
-use Caffeinated\Modules\Contracts\Repository;
-use Caffeinated\Modules\Providers\BladeServiceProvider;
-use Caffeinated\Modules\Providers\ConsoleServiceProvider;
-use Caffeinated\Modules\Providers\GeneratorServiceProvider;
-use Caffeinated\Modules\Providers\HelperServiceProvider;
-use Caffeinated\Modules\Providers\RepositoryServiceProvider;
+use Akhan\Modules\Contracts\Repository;
+use Akhan\Modules\Providers\BladeServiceProvider;
+use Akhan\Modules\Providers\ConsoleServiceProvider;
+use Akhan\Modules\Providers\GeneratorServiceProvider;
+use Akhan\Modules\Providers\HelperServiceProvider;
+use Akhan\Modules\Providers\RepositoryServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 class ModulesServiceProvider extends ServiceProvider

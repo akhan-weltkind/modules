@@ -1,8 +1,8 @@
 <?php
 
-namespace Caffeinated\Modules\Console\Generators;
+namespace Akhan\Modules\Console\Generators;
 
-use Caffeinated\Modules\Modules;
+use Akhan\Modules\Modules;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Console\Helper\ProgressBar;
@@ -23,7 +23,7 @@ class MakeModuleCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Create a new Caffeinated module and bootstrap it';
+    protected $description = 'Create a new Akhan module and bootstrap it';
 
     /**
      * The modules instance.
@@ -69,16 +69,12 @@ class MakeModuleCommand extends Command
     {
         $this->container['slug'] = str_slug($this->argument('slug'));
         $this->container['name'] = studly_case($this->container['slug']);
-        $this->container['version'] = '1.0';
-        $this->container['description'] = 'This is the description for the '.$this->container['name'].' module.';
 
         if ($this->option('quick')) {
             $this->container['basename']    = studly_case($this->container['slug']);
             $this->container['namespace']   = config('modules.namespace').$this->container['basename'];
             return $this->generate();
         }
-
-        $this->displayHeader('make_module_introduction');
 
         $this->stepOne();
     }
@@ -90,31 +86,19 @@ class MakeModuleCommand extends Command
      */
     protected function stepOne()
     {
-        $this->displayHeader('make_module_step_1');
-
         $this->container['name'] = $this->ask('Please enter the name of the module:', $this->container['name']);
         $this->container['slug'] = $this->ask('Please enter the slug for the module:', $this->container['slug']);
-        $this->container['version'] = $this->ask('Please enter the module version:', $this->container['version']);
-        $this->container['description'] = $this->ask('Please enter the description of the module:', $this->container['description']);
         $this->container['basename'] = studly_case($this->container['slug']);
         $this->container['namespace'] = config('modules.namespace').$this->container['basename'];
 
         $this->comment('You have provided the following manifest information:');
         $this->comment('Name:                       '.$this->container['name']);
         $this->comment('Slug:                       '.$this->container['slug']);
-        $this->comment('Version:                    '.$this->container['version']);
-        $this->comment('Description:                '.$this->container['description']);
         $this->comment('Basename (auto-generated):  '.$this->container['basename']);
         $this->comment('Namespace (auto-generated): '.$this->container['namespace']);
 
-        if ($this->confirm('If the provided information is correct, type "yes" to generate.')) {
-            $this->comment('Thanks! That\'s all we need.');
-            $this->comment('Now relax while your module is generated.');
+        $this->generate();
 
-            $this->generate();
-        } else {
-            return $this->stepOne();
-        }
 
         return true;
     }
@@ -217,18 +201,14 @@ class MakeModuleCommand extends Command
             'DummyBasename',
             'DummyNamespace',
             'DummyName',
-            'DummySlug',
-            'DummyVersion',
-            'DummyDescription',
+            'DummySlug'
         ];
 
         $replace = [
             $this->container['basename'],
             $this->container['namespace'],
             $this->container['name'],
-            $this->container['slug'],
-            $this->container['version'],
-            $this->container['description'],
+            $this->container['slug']
         ];
 
         return str_replace($find, $replace, $contents);

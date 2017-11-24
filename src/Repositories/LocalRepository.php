@@ -1,6 +1,6 @@
 <?php
 
-namespace Caffeinated\Modules\Repositories;
+namespace Akhan\Modules\Repositories;
 
 class LocalRepository extends Repository
 {

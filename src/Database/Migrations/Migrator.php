@@ -1,6 +1,6 @@
 <?php
 
-namespace Caffeinated\Modules\Database\Migrations;
+namespace Akhan\Modules\Database\Migrations;
 
 use Illuminate\Database\ConnectionResolverInterface as Resolver;
 use Illuminate\Database\Migrations\MigrationRepositoryInterface;

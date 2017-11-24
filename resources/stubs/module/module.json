@@ -1,6 +1,4 @@
 {
     "name": "DummyName",
-    "slug": "DummySlug",
-    "version": "DummyVersion",
-    "description": "DummyDescription"
+    "slug": "DummySlug"
 }
