@@ -127,7 +127,8 @@ class MakeModuleCommand extends Command
 
 
         $slug = $this->container['slug'];
-        $name = $this->container['slug'];
+        $name = $this->container['name'];
+        $table = Str::plural(Str::snake(class_basename($this->container['slug'])));
 
         $this->callSilent('make:module:model',[
             'slug' => $slug,
@@ -136,7 +137,7 @@ class MakeModuleCommand extends Command
 
         $this->callSilent('make:module:migration',[
             'slug' => $slug,
-            'name' => $name
+            'name' => "create_{$table}_table"
         ]);
 
         $progress->finish();
