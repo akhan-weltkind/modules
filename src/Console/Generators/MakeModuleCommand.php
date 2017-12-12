@@ -4,6 +4,7 @@ namespace Akhan\Modules\Console\Generators;
 
 use Akhan\Modules\Modules;
 use Illuminate\Console\Command;
+use Illuminate\Support\Str;
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Console\Helper\ProgressBar;
 
