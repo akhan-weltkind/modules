@@ -2,7 +2,10 @@
 
 namespace DummyNamespace;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Model;
+use App\Models\Image;
+use Kyslik\ColumnSortable\Sortable;
+use Illuminate\Notifications\Notifiable;
 
 class DummyClass extends Model
 {

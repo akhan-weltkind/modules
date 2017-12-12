@@ -1,18 +1,10 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your module. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
-
 Route::localizedGroup(function () {
-    Route::group(['prefix' => config('cms.uri')], function() {
-        Route::resource('DummySlug', 'Admin\IndexController');
-    });
+    Route::prefix(config('cms.uri'))
+        ->as(config('cms.uri-alias'))
+        ->group(function (){
+            Route::resource('DummySlug', 'Admin\IndexController');
+            //Route::delete('DummySlug/delete-upload/{id}/{field}', 'Admin\IndexController@deleteUpload')->name('DummySlug.delete-upload');
+        });
 });
