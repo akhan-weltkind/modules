@@ -108,6 +108,7 @@ class MakeModuleCommand extends Command
      */
     protected function generate()
     {
+
         $steps = [
             'Generating module...'       => 'generateModule',
             'Optimizing module cache...' => 'optimizeModules',
@@ -123,6 +124,10 @@ class MakeModuleCommand extends Command
 
             $progress->advance();
         }
+
+
+        $this->callSilent('make:module:model '. $this->container['slug']);
+        $this->callSilent('make:module:migration '. $this->container['slug']);
 
         $progress->finish();
 
