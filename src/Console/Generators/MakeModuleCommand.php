@@ -126,8 +126,8 @@ class MakeModuleCommand extends Command
         }
 
 
-        $this->callSilent('make:module:model',$this->container['slug']);
-        $this->callSilent('make:module:migration',$this->container['slug']);
+        $this->callSilent('make:module:model',[ 'slug' => $this->container['slug'] ]);
+        $this->callSilent('make:module:migration',['slug' => $this->container['slug']]);
 
         $progress->finish();
 
