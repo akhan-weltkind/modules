@@ -3,7 +3,7 @@
 @section('form_content')
 
     {!!
-        BootForm::open([
+        AdminBootForm::open([
             'model'  => $entity,
             'store'  => $routePrefix.'store',
             'update' => $routePrefix.'update',
@@ -15,7 +15,7 @@
     {{--Пример текстового поля--}}
 
     <div class="col-md-6">
-        {!! BootForm::text('title', trans('admin::fields.title')) !!}
+        {!! AdminBootForm::text('title', trans('admin::fields.title')) !!}
     </div>
 
     {{--Чтобы были seo поля раскоментируйте--}}

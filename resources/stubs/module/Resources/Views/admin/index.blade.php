@@ -2,7 +2,7 @@
 
 @section('th')
     {{--Пример колонки с функцией сортировки ASC-DESC--}}
-    <th>@sortablelink('title', trans('admin::fields.title'))</th>
+    <th width="150">@sortablelink('title', trans('admin::fields.title'))</th>
     <th>@lang('admin::admin.control')</th>
 @endsection
 
