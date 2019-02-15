@@ -2,12 +2,12 @@
 
 @section('content')
     @if (count($items))
-        @foreach($items as $entity)
-            <p>{{$entity->title}}</p>
+        @foreach($items as $item)
+            <p>{{ $item->title }}</p>
         @endforeach
 
         {{--Пагинатор--}}
-        {{  $items->appends(\Request::except('page'))->links('common.paginate') }}
+        {!! $items->appends(\Request::except('page'))->links('common.paginate') !!}
     @else
         <p>@lang('DummySlug::index.no_records')</p>
     @endif
