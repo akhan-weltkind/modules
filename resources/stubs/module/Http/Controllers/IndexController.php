@@ -9,6 +9,6 @@ class IndexController extends Controller
 {
     public function getModel()
     {
-        return new DummyName;
+        return new DummyName();
     }
 }
