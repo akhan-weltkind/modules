@@ -2,19 +2,9 @@
 
 namespace App\Modules\DummyName\Providers;
 
-use App\Providers\ModuleProvider;
+use App\Modules\Admin\Providers\BaseModuleServiceProvider;
 
-class ModuleServiceProvider extends ModuleProvider
+class ModuleServiceProvider extends BaseModuleServiceProvider
 {
-    public $module = 'DummySlug';
-
-    /**
-     * Register the module services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        $this->app->register(RouteServiceProvider::class);
-    }
+    //
 }

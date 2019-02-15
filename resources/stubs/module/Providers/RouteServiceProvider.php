@@ -2,11 +2,9 @@
 
 namespace App\Modules\DummyName\Providers;
 
-use App\Modules\Admin\Providers\BaseAdminRouteServiceProvider;
+use App\Modules\Admin\Providers\BaseRouteServiceProvider;
 
-class RouteServiceProvider extends BaseAdminRouteServiceProvider
+class RouteServiceProvider extends BaseRouteServiceProvider
 {
-    protected $namespace = 'App\Modules\DummyName\Http\Controllers';
-
-    protected $module    = 'DummySlug';
+    //
 }
