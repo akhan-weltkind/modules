@@ -3,18 +3,10 @@
 namespace DummyNamespace;
 
 use App\Models\Model;
-/*use App\Models\Image;*/
 use Kyslik\ColumnSortable\Sortable;
 use Illuminate\Notifications\Notifiable;
 
 class DummyClass extends Model
 {
-    use Notifiable,
-        Sortable;
-        /*Image;*/
-
-         public function scopeOrder($query)
-         {
-             return $query;
-         }
+    use Notifiable, Sortable;
 }
