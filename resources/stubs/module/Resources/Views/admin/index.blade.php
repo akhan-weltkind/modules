@@ -15,7 +15,9 @@
         <tr>
             {{--Пример как заполнять таблицу--}}
             <td>{{ $entity->title }}</td>
-            <td class="controls">@include ('admin::common.controls.all', ['routePrefix'=>$routePrefix, 'id'=>$entity->id])</td>
+            <td class="controls">
+                @include ('admin::common.controls.all', ['routePrefix' => $routePrefix, 'id' => $entity->id])
+            </td>
         </tr>
     @endforeach
 @endsection

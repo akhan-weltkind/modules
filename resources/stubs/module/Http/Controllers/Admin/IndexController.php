@@ -11,7 +11,7 @@ class IndexController extends Admin
      * Возвращает модель. Функция используется в родительском контроллере
      *
      * @return DummyName
-    */
+     */
     public function getModel()
     {
         return new DummyName;
